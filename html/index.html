@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="catan.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>Catan Board Generator</title>
+    </head>
+    <body>
+        <div id="board">
+            <h1>Catan Board Generator</h1>        
+            <canvas id="catanBoard"></canvas>          
+        </div>
+        <button onclick="DrawBoard()">Generate New Board</button>
+        <br />
+        <div id="constraints">  
+            <label for="numberConstraint"><b>No Adjacent 6s or 8s:  <input type="checkbox" id="numberConstraint" name="numberConstraint" checked onclick="toggleNumberConstrained()"/></b></label>
+            <label for="terrainConstraint"><b>Maximum Adjacent Terrains:  <input type="number" id="terrainConstraint" name="terrainConstraint" min="0" max="4" value="2" onchange="updateTerrainConstraint()"/></b></label>                   
+        </div>
+        
+        <!--
+        <img src="lumber.jpg" style="display: none;" id="lumber"/>
+        <img src="wool.jpg" style="display: none;" id="wool"/>
+        <img src="grain.jpg" style="display: none;" id="grain"/>
+        <img src="ore.jpg" style="display: none;" id="ore"/>
+        <img src="brick.png" style="display: none;" id="brick"/>
+        <img src="desert.png" style="display: none;" id="desert"/>
+        -->
+    </body>
+</html>
